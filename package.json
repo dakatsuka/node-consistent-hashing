@@ -1,0 +1,24 @@
+{
+  "name": "consistent-hashing",
+  "version": "0.1.0",
+  "description": "A pure JavaScript implementation of Consistent Hashing",
+  "author": "Dai Akatsuka <d.akatsuka@gmail.com>",
+  "main": "./index.js",
+  "scripts": {
+    "test": "nodeunit ./test/consistent_hashing.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dakatsuka/node-consistent-hashing.git"
+  },
+  "directories": { "lib": "./lib" },
+  "bugs": {
+    "web": "http://github.com/dakatsuka/node-cosistent-hashing/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/dakatsuka/node-consistent-hashing/raw/master/LICENSE"
+    }
+  ]
+}
