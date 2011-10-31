@@ -13,7 +13,7 @@
   },
   "directories": { "lib": "./lib" },
   "bugs": {
-    "web": "http://github.com/dakatsuka/node-cosistent-hashing/issues"
+    "url": "http://github.com/dakatsuka/node-cosistent-hashing/issues"
   },
   "licenses": [
     {
