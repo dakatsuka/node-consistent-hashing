@@ -1,6 +1,8 @@
-# node-consistent-hashing
+# node-consistent-hashing [![Build Status](https://secure.travis-ci.org/dakatsuka/node-consistent-hashing.png?branch=master)][travis]
 
 A pure JavaScript implementation of Consistent Hashing for Node.js.
+
+[travis]: http://travis-ci.org/dakatsuka/node-consistent-hashing
 
 ## Installation
 
