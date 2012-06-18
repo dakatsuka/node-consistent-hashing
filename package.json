@@ -5,7 +5,7 @@
   "author": "Dai Akatsuka <d.akatsuka@gmail.com>",
   "main": "./index.js",
   "scripts": {
-    "test": "nodeunit ./test/consistent_hashing.test.js"
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     }
   ],
   "devDependencies": {
-    "nodeunit": "0.5.3"
+    "mocha": "1.1.0",
+    "should": "0.6.3"
   }
 }

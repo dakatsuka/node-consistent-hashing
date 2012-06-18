@@ -1,10 +1,10 @@
-var testCase = require('nodeunit').testCase,
-    ConsistentHashing = require('..');
+var should = require('should');
+var ConsistentHashing = require('../');
 
-var nodes = ["node1", "node2", "node3"];
+describe('ConsistentHashing', function() {
+  var nodes = ["node1", "node2", "node3"];
 
-module.exports = testCase({
-  setUp: function(callback) {
+  before(function(done) {
     Array.prototype.contains = function(value) {
       for (var i in this) {
         if (this.hasOwnProperty(i) && this[i] == value) {
@@ -13,55 +13,55 @@ module.exports = testCase({
       }
       return false;
     };
-    callback();
-  },
+    done();
+  });
 
-  'should be set default values': function(test) {
+  it('should be set default values', function(done) {
     var cons = new ConsistentHashing(nodes);
-    test.equal(cons.replicas, 160);
-    test.equal(cons.algorithm, 'md5');
-    test.done();
-  },
+    cons.replicas.should.equal(160);
+    cons.algorithm.should.equal('md5');
+    done();
+  });
 
-  'should be able to change value of replicas': function(test) {
+  it('should be able to change value of replicas', function(done) {
     var cons  = new ConsistentHashing(nodes, { replicas: 300 });
-    test.equal(cons.replicas, 300);
-    test.done();
-  },
+    cons.replicas.should.equal(300);
+    done();
+  });
 
-  'should be able to change algorithm': function(test) {
+  it('should be able to change algorithm', function(done) {
     var cons  = new ConsistentHashing(nodes, { algorithm: 'sha1' });
-    test.equal(cons.algorithm, 'sha1');
-    test.done();
-  },
+    cons.algorithm.should.equal('sha1');
+    done();
+  });
 
-  'should add nodes': function(test) {
+  it('should add nodes', function(done) {
     var cons = new ConsistentHashing(nodes);
     cons.addNode("node4");
-    test.equal(cons.nodes.contains("node4"), true);
-    test.equal(cons.keys.length, cons.replicas * 4);
-    test.done();
-  },
+    cons.nodes.contains("node4").should.be.true;
+    cons.keys.length.should.equal(cons.replicas * 4);
+    done();
+  });
 
-  'should remove node': function(test) {
+  it('should remove node', function(done) {
     var cons = new ConsistentHashing(nodes);
     cons.removeNode("node1");
-    test.equal(cons.nodes.contains("node1"), false);
-    test.equal(cons.keys.length, cons.replicas * 2);
-    test.done();
-  },
+    cons.nodes.contains("node1").should.be.false;
+    cons.keys.length.should.equal(cons.replicas * 2);
+    done();
+  });
 
-  'should create an array for sort': function(test) {
+  it('should create an array for sort', function(done) {
     var cons = new ConsistentHashing(nodes);
-    test.equal(cons.keys.length, cons.replicas * nodes.length);
-    test.done();
-  },
+    cons.keys.length.should.equal(cons.replicas * nodes.length);
+    done();
+  });
 
-  'should get a node from key': function(test) {
+  it('should get a node from key', function(done) {
     var cons = new ConsistentHashing(nodes);
-    test.equal(cons.getNode('A'), "node3");
-    test.equal(cons.getNode('B'), "node1");
-    test.equal(cons.getNode('C'), "node1");
-    test.done();
-  }
+    cons.getNode('A').should.equal("node3");
+    cons.getNode('B').should.equal("node1");
+    cons.getNode('C').should.equal("node1");
+    done();
+  });
 });
