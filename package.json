@@ -20,5 +20,8 @@
       "type": "MIT",
       "url": "http://github.com/dakatsuka/node-consistent-hashing/raw/master/LICENSE"
     }
-  ]
+  ],
+  "devDependencies": {
+    "nodeunit": "0.5.3"
+  }
 }
