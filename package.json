@@ -12,6 +12,9 @@
     "url": "git://github.com/dakatsuka/node-consistent-hashing.git"
   },
   "directories": { "lib": "./lib" },
+  "engines": {
+    "node": ">= 0.6"
+  },
   "bugs": {
     "url": "http://github.com/dakatsuka/node-cosistent-hashing/issues"
   },
@@ -22,7 +25,7 @@
     }
   ],
   "devDependencies": {
-    "mocha": "1.1.0",
-    "should": "0.6.3"
+    "mocha": "1.3.2",
+    "should": "1.1.0"
   }
 }
