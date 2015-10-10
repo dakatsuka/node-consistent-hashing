@@ -3,6 +3,7 @@
   "version": "0.2.3",
   "description": "A pure JavaScript implementation of Consistent Hashing",
   "author": "Dai Akatsuka <d.akatsuka@gmail.com>",
+  "homepage": "https://github.com/dakatsuka/node-cosistent-hashing",
   "main": "./index.js",
   "scripts": {
     "test": "mocha -R spec"
@@ -16,16 +17,12 @@
     "node": ">= 0.6"
   },
   "bugs": {
-    "url": "http://github.com/dakatsuka/node-cosistent-hashing/issues"
+    "url": "https://github.com/dakatsuka/node-cosistent-hashing/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/dakatsuka/node-consistent-hashing/raw/master/LICENSE"
-    }
-  ],
+  "keywords": ["consistent", "hashing"],
+  "license": "MIT",
   "devDependencies": {
-    "mocha": "1.3.2",
-    "should": "1.1.0"
+    "mocha": "~> 2.3",
+    "should": "~> 7.1"
   }
 }
