@@ -1,6 +1,6 @@
 {
   "name": "consistent-hashing",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A pure JavaScript implementation of Consistent Hashing",
   "author": "Dai Akatsuka <d.akatsuka@gmail.com>",
   "homepage": "https://github.com/dakatsuka/node-cosistent-hashing",
