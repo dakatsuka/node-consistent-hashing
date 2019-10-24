@@ -24,12 +24,11 @@ var chars = [
 chars.forEach(function(c) {
   var node = cons.getNode(c);
 
-  if (nodes[node]) {
-    nodes[node].push(c);
-  } else {
+  if (!nodes[node]) {
     nodes[node] = [];
-    nodes[node].push(c);
-  }
+  } 
+
+  nodes[node].push(c);
 });
 
 console.log(nodes);
